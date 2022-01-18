@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Timer } from "./components/Timer";
 
 export const App = () => {
   const time = 5
@@ -22,10 +23,7 @@ export const App = () => {
     <>
       <header>ヘッダーコンポーネント</header>
       <main>
-        <div>
-          <p>{timer}</p>
-          <button disabled={disabled} onClick={onClickStart}>スタート</button>
-        </div>
+        <Timer timer={timer} disabled={disabled} onClickStart={onClickStart}/>
         <div>キャラクターコンポーネント
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="35" viewBox="0 0 16 35">
   <g id="グループ_1" data-name="グループ 1" transform="translate(-260 -201)">
