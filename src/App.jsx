@@ -27,7 +27,7 @@ export const App = () => {
       <header>ヘッダーコンポーネント</header>
       <main>
         <Timer timer={timer} disabled={disabled} onClickStart={onClickStart}/>
-        <Character/>
+        <Character timer={timer}/>
         <Menu/>
         <Divination/>
       </main>

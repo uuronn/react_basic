@@ -1,8 +1,21 @@
-export const Character = () => {
-  // const {} = props;
+export const Character = (props) => {
+  const { timer } = props;
+
+  const timerStyle = {
+    borderRadius: "20px",
+    width: "140px",
+    background: "#bdbdbd",
+    textAlign: "center",
+    lineHeight: "100px",
+    marginLeft: "auto",
+    marginRight: "auto"
+  }
   
   return (
     <div>
+      <p style={timerStyle}>
+        {timer}
+      </p>
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="35" viewBox="0 0 16 35">
         <g transform="translate(-260 -201)">
           <g transform="translate(265 201)" fill="#fff" stroke="#707070" stroke-width="1">
