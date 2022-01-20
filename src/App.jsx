@@ -11,9 +11,17 @@ export const App = () => {
 
   const onClickStart = () => {
     setDisabled({disabled: true});
+    // const aaa = console.log("test")
+    // const timerID = setInterval(() => {
+    //   setTimer(prevState => prevState - 1)
+    // }, 1000)
     setTimeout(() => {
       setTimer(prevState => prevState - 1)
     }, 1000)
+  }
+
+  const onClickStop = () => {
+    // clearInterval(this.aaa);
   }
   
   useEffect(() => {
@@ -26,7 +34,12 @@ export const App = () => {
     <>
       <header>ヘッダーコンポーネント</header>
       <main>
-        <Timer timer={timer} disabled={disabled} onClickStart={onClickStart}/>
+        <Timer
+          timer={timer}
+          disabled={disabled}
+          onClickStart={onClickStart}
+          onClickStop={onClickStop}
+        />
         <Character timer={timer}/>
         <Menu/>
         <Divination/>
