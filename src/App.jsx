@@ -8,6 +8,8 @@ export const App = () => {
   const time = 5
   const [timer, setTimer] = useState(time)
   const [disabled, setDisabled] = useState(false)
+  const [show, setShow] = useState(false)
+  
 
   const onClickStart = () => {
     setDisabled({disabled: true});
@@ -23,26 +25,34 @@ export const App = () => {
   const onClickStop = () => {
     // clearInterval(this.aaa);
   }
+
+  const onClickk = () => {
+    setShow(false)
+  }
   
   useEffect(() => {
     if(timer === time) return;
     if(timer === 0) return;
     onClickStart()
   }, [timer])
-  
+
   return (
     <>
       <header>ヘッダーコンポーネント</header>
+      <button onClickk={onClickk}>fdfds</button>
       <main>
         <Timer
+        {...show}
+          
           timer={timer}
           disabled={disabled}
           onClickStart={onClickStart}
           onClickStop={onClickStop}
         />
         <Character timer={timer}/>
-        <Menu/>
         <Divination/>
+        <Menu/>
+        <div></div>
       </main>
     </>
   );

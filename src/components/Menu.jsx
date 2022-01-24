@@ -7,9 +7,14 @@ export const Menu = () => {
     width: "60px",
     height: "auto"
   }
+
+  const onClickMenu = () => {
+    alert("test")
+  }
   
   return (
-      <svg xmlns="http://www.w3.org/2000/svg" width="79" height="56" viewBox="0 0 79 56" style={menuStyle}>
+    <div>
+      <svg onClick={onClickMenu} xmlns="http://www.w3.org/2000/svg" width="79" height="56" viewBox="0 0 79 56" style={menuStyle}>
         <g transform="translate(-417.5 -113.5)">
           <g transform="translate(417.5 113.5)" fill="#230707" stroke="#fff" stroke-width="1">
             <rect width="79" height="12" rx="6" stroke="none"/>
@@ -25,5 +30,10 @@ export const Menu = () => {
           </g>
         </g>
       </svg>
+      <div>
+        <button>タイマーページ</button>
+        <button>おみくじページ</button>
+      </div>
+    </div>
   )
 }
